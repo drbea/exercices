@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Produit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .nav-link {
+            float: right;
+            padding: 8px 20px;
+            color: #4A90E2;
+            text-decoration: none;
+            border: 1px solid #4A90E2;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background-color: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #357ABD;
+        }
+
+        .features-section {
+            padding: 80px 50px;
+            background-color: white;
+        }
+
+        .features-container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .feature-box {
+            float: left;
+            width: 30%;
+            margin-right: 5%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-box:last-child {
+            margin-right: 0;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #4A90E2;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+        }
+
+        .feature-box h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #666;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MonProduit</div>
+
+        <nav class="nav-link">
+            <ul></ul>
+        </nav>
+        <a href="#" class="nav-link">Se connecter</a>
+    </header>
+
+    <section class="hero-section">
+        <h1>Transformez votre entreprise</h1>
+        <p>La solution complète pour gérer vos projets, collaborer avec votre équipe et atteindre vos objectifs plus rapidement.</p>
+        <a href="#" class="cta-button">Commencer l'essai gratuit</a>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+            <div class="feature-box">
+                <div class="feature-icon"></div>
+                <h3>Rapide</h3>
+                <p>Interface intuitive qui vous permet de démarrer en quelques minutes seulement.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"></div>
+                <h3>Sécurisé</h3>
+                <p>Vos données sont protégées par un cryptage de niveau entreprise.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon"></div>
+                <h3>Collaboratif</h3>
+                <p>Travaillez en équipe en temps réel sur tous vos projets.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

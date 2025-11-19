@@ -1,0 +1,114 @@
+classDiagram
+    %% Classes principales avec explications simples
+    
+    class Utilisateur {
+        +Nom et Prénom
+        +Email et Téléphone
+        +Rôle (Admin/Superviseur/Technicien)
+        +Statut du compte
+    }
+    
+    class Site {
+        +Nom du site
+        +Localisation
+        +Description
+        +Superviseur responsable
+        +Nombre d'équipements
+    }
+    
+    class Équipement {
+        +Nom de l'équipement
+        +Numéro de série
+        +Type/Modèle
+        +Statut (Actif/En maintenance/Hors service)
+        +Date dernière maintenance
+        +Date prochaine maintenance
+        +Fabricant
+    }
+    
+    class Catégorie {
+        +Nom (Pompe, Moteur, etc.)
+        +Description
+        +Icône et couleur
+    }
+    
+    class RapportPanne {
+        +Titre du problème
+        +Description détaillée
+        +Photo de la panne
+        +Note vocale
+        +Statut (En attente/En cours/Résolu)
+        +Priorité (Faible/Moyenne/Haute/Critique)
+        +Analyse IA
+        +Recommandations IA
+    }
+    
+    class AnalyseIA {
+        +Problème détecté
+        +Niveau de confiance
+        +Recommandations
+        +Sévérité estimée
+        +Temps de traitement
+    }
+    
+    class Notification {
+        +Titre
+        +Message
+        +Type (Email/SMS/WhatsApp)
+        +Priorité
+        +Date d'envoi
+    }
+    
+    class PlanMaintenance {
+        +Type (Préventive/Corrective)
+        +Date prévue
+        +Date réalisée
+        +Technicien assigné
+        +Liste de vérification
+        +Statut de complétion
+    }
+    
+    class CommentaireRapport {
+        +Message
+        +Auteur
+        +Date
+        +Type (Interne/Public)
+    }
+    
+    class HistoriqueStatut {
+        +Ancien statut
+        +Nouveau statut
+        +Qui a changé
+        +Date du changement
+        +Commentaire
+    }
+    
+    %% Relations principales
+    Utilisateur "1" --> "0..*" Site : supervise
+    Utilisateur "1" --> "0..*" Site : travaille sur
+    Site "1" --> "0..*" Catégorie : contient
+    Site "1" --> "0..*" Équipement : héberge
+    Catégorie "1" --> "0..*" Équipement : regroupe
+    
+    Utilisateur "1" --> "0..*" RapportPanne : crée
+    Utilisateur "1" --> "0..*" RapportPanne : assigné à
+    Équipement "1" --> "0..*" RapportPanne : fait l'objet de
+    
+    RapportPanne "1" --> "0..*" AnalyseIA : analysé par
+    RapportPanne "1" --> "0..*" CommentaireRapport : contient
+    RapportPanne "1" --> "0..*" HistoriqueStatut : a un historique
+    
+    Équipement "1" --> "0..*" PlanMaintenance : planifié pour
+    Utilisateur "1" --> "0..*" PlanMaintenance : responsable de
+    
+    Utilisateur "1" --> "0..*" Notification : reçoit
+    RapportPanne "1" --> "0..*" Notification : génère
+    
+    %% Notes explicatives
+    note for Utilisateur "3 types d'utilisateurs :\n- Admin : gestion complète\n- Superviseur : validation et suivi\n- Technicien : intervention terrain"
+    
+    note for RapportPanne "Le cœur du système :\n- Signalement avec photo/voix\n- Analyse automatique par IA\n- Suivi du statut\n- Attribution aux techniciens"
+    
+    note for AnalyseIA "Intelligence Artificielle :\n- Détecte le problème\n- Évalue la gravité\n- Propose des solutions\n- Score de confiance"
+    
+    note for PlanMaintenance "Maintenance préventive :\n- Planification automatique\n- Rappels aux techniciens\n- Suivi des interventions"

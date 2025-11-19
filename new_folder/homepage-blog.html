@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Blog - Accueil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 30px 50px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        main {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 6px;
+        }
+
+        aside {
+            width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            height: fit-content;
+        }
+
+        .article {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .article:last-child {
+            border-bottom: none;
+        }
+
+        .article h2 {
+            font-size: 28px;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .article h2 a {
+            color: #2C3E50;
+            text-decoration: none;
+        }
+
+        .article h2 a:hover {
+            color: #3498DB;
+        }
+
+        .article-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .article-excerpt {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498DB;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        aside h3 {
+            font-size: 20px;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498DB;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin-bottom: 12px;
+        }
+
+        aside ul li a {
+            color: #555;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        aside ul li a:hover {
+            color: #3498DB;
+        }
+
+        footer {
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon Blog Personnel</h1>
+        <input type="text" class="search-box" placeholder="Rechercher des articles...">
+    </header>
+
+    <div class="container">
+        <main>
+            <article class="article">
+                <h2><a href="#">Les tendances du développement web en 2025</a></h2>
+                <p class="article-date">10 novembre 2025</p>
+                <p class="article-excerpt">
+                    Le monde du développement web évolue constamment. Dans cet article, nous explorons les nouvelles technologies et frameworks qui dominent l'industrie cette année. De l'intelligence artificielle intégrée aux interfaces utilisateur aux performances améliorées, découvrez ce qui façonne l'avenir du web.
+                </p>
+                <a href="#" class="read-more">Lire la suite →</a>
+            </article>
+
+            <article class="article">
+                <h2><a href="#">Comment optimiser votre site pour le SEO</a></h2>
+                <p class="article-date">5 novembre 2025</p>
+                <p class="article-excerpt">
+                    Le référencement naturel est essentiel pour la visibilité de votre site web. Dans ce guide complet, nous partageons les meilleures pratiques pour améliorer votre classement dans les moteurs de recherche. Apprenez à structurer votre contenu, optimiser vos balises et créer une stratégie de mots-clés efficace.
+                </p>
+                <a href="#" class="read-more">Lire la suite →</a>
+            </article>
+
+            <article class="article">
+                <h2><a href="#">Débuter avec React : Guide pour débutants</a></h2>
+                <p class="article-date">1 novembre 2025</p>
+                <p class="article-excerpt">
+                    React est l'une des bibliothèques JavaScript les plus populaires pour créer des interfaces utilisateur. Ce tutoriel vous guidera à travers les concepts fondamentaux de React, des composants aux hooks, en passant par la gestion d'état. Parfait pour les développeurs qui souhaitent se lancer.
+                </p>
+                <a href="#" class="read-more">Lire la suite →</a>
+            </article>
+        </main>
+
+        <aside>
+            <h3>Catégories</h3>
+            <ul>
+                <li><a href="#">Développement Web (12)</a></li>
+                <li><a href="#">Design (8)</a></li>
+                <li><a href="#">Marketing Digital (5)</a></li>
+                <li><a href="#">Tutoriels (15)</a></li>
+                <li><a href="#">Actualités Tech (9)</a></li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Articles Populaires</h3>
+            <ul>
+                <li><a href="#">Introduction à JavaScript</a></li>
+                <li><a href="#">CSS Grid vs Flexbox</a></li>
+                <li><a href="#">Sécurité web en 2025</a></li>
+                <li><a href="#">Les meilleurs outils de design</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mon Blog. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
