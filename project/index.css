@@ -1,0 +1,151 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:  0 15px;
+    background-color: rgb(77, 77, 212);
+    color: #ffffff;
+    align-items: center;
+    justify-items: center;
+}
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+select {
+    border: none;
+    background: none;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+form input[type="button"] {
+    background-color: none;
+    background: none;
+    border: 1px solid red;
+    color: red;
+    padding: 5px;
+}
+
+/* Carousel */
+.carousel ul {
+  width: 100vw;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  anchor-name: --my-carousel;
+
+
+}
+
+.carousel ul  li {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  height: 600px;
+  flex: 0 0 100%;
+
+  scroll-snap-align: center;
+}
+
+.carousel ul li:nth-child(even) {
+  background-color: cyan;
+}
+
+.carousel ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+
+  position: absolute;
+  position-anchor: --my-carousel;
+}
+
+.carousel ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+.carousel ul::scroll-button(left) {
+  content: "◄";
+right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+.carousel ul::scroll-button(right) {
+  content: "►";
+    left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+
+
+
+
+.produit  {
+    width: 250px;
+    height: 350px;
+    border: 1px solid #dddddd;
+    justify-items: center;
+}
+.detail-prod button {
+    background-color: royalblue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.produit img {
+    width: 100%;
+    height: 60%;
+}
+/* 
+.ensembleproduit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-items: center;
+} */
+
+.list-produits {
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: rgb(77, 77, 212);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* justify-items: center; */
+    padding: auto 15px;
+}
