@@ -1,0 +1,19 @@
+
+
+.banniere {
+  background-image: url("https://drbea.github.io/clshop/images/banner%20pc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+
+
+.banniere h2 {
+  font-weight: bolder;
+  padding: 80px 0px 0px 450px;
+}
+
+.produits h2 {
+    text-align: center;
+}
