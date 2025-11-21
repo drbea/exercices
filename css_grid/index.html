@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Grid</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>CSS Grid Layout</h1>
+        <nav>
+            <ul>
+                <li>Flex</li>
+                <li>Grid</li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </aside>
+    <main class="principal">
+        <h2>Main Content Area</h2>
+        <p>This is the main content area where the primary information will be displayed.</p>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2024 CSS Grid Layout Example
+        </p>
+    </footer>
+</div>
+    
+</body>
+</html>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "sidebar principal"
+            "footer footer";
+    align-items: center;
+    /* grid-template-columns: 1fr 3fr; */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+    }
+
+    header {
+        grid-area: header;
+        background-color: aqua;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: aquamarine;
+        grid-row: 1 / -1; /* Estende a sidebar por toda a altura do container */
+        grid-column: 1/ -1  ;
+        z-index: 10;
+    }
+
+    main {
+        grid-area: principal;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: aqua;
+    }
+</style>
