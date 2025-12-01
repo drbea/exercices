@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test css Grid</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Titre</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">This</a></li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="sidebar-left">
+      <h2>Titre nive 2</h2>
+      <ol>
+        <li>magazine</li>
+        <li>Actu</li>
+        <li>bande dessinne</li>
+      </ol>
+    </aside>
+    <main class="principal">
+        <section>
+          <h2>content1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           </p>
+        </section>
+        <article class="actu">\
+          
+            <h3>hello</h3>
+            <img src="./new_folder/profil.jpg" alt="">
+        </article>
+    </main>
+
+  </body>
+</html>
+<style media="screen">
+  .principal {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  body{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "aside main main";
+
+  }
+
+  .header {
+    grid-area: header;
+    background-color: skyblue;
+  }
+  .sidebar-left {
+    grid-area: aside;
+    background-color: grey;
+  }
+  .principal {
+    grid-area: main;
+    background-color: #aeee99;
+  }
+</style>

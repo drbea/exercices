@@ -16,17 +16,25 @@
             </ul>
         </nav>
     </header>
-    <aside class="sidebar">
+    <!-- <aside class="sidebar">
         <h2>Sidebar</h2>
         <ul>
             <li>Item 1</li>
             <li>Item 2</li>
             <li>Item 3</li>
         </ul>
-    </aside>
+    </aside> -->
     <main class="principal">
-        <h2>Main Content Area</h2>
-        <p>This is the main content area where the primary information will be displayed.</p>
+        <section>
+            <article class="article1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci, veniam illo, expedita officiis explicabo magnam odio optio laboriosam vitae, voluptatibus voluptas nesciunt ratione nisi amet inventore ipsa ex asperiores!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique adipisci, veniam illo, expedita officiis explicabo magnam odio optio laboriosam vitae, voluptatibus voluptas nesciunt ratione nisi amet inventore ipsa ex asperiores!</p>
+            </article>
+            <div class="aside1">
+                <h3>Categories</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuNhTZJTtkR6b-ADMhmzPvVwaLuLdz273wvQ&s" alt="">
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -40,36 +48,19 @@
 </html>
 
 <style>
-    .container {
+    .principal {
         display: grid;
-        grid-template-areas: 
-            "header header"
-            "sidebar principal"
-            "footer footer";
-    align-items: center;
-    /* grid-template-columns: 1fr 3fr; */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+        grid-template-areas:
+            "article1 aside1"
+            "article1 aside1";
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+    }
+    .article1 {
+        grid-area: article1;
+    }
+    .aside1 {
+        grid-area: aside1;
     }
 
-    header {
-        grid-area: header;
-        background-color: aqua;
-    }
-
-    .sidebar {
-        grid-area: sidebar;
-        background-color: aquamarine;
-        grid-row: 1 / -1; /* Estende a sidebar por toda a altura do container */
-        grid-column: 1/ -1  ;
-        z-index: 10;
-    }
-
-    main {
-        grid-area: principal;
-    }
-
-    footer {
-        grid-area: footer;
-        background-color: aqua;
-    }
 </style>
