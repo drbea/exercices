@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap');
+
+
+.hero{
+  background-color: #4367Af
+}
+
+
+.lead {
+  background-color: #4367Af;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: "Playwrite NO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 25px;
+  font-style: normal;
+}
