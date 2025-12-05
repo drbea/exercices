@@ -1,42 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exo1</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ma Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Styles personnalisés */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #0d6efd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header class="row">
-            <h1 class=" h1 col">
-                Exo bootstrap
-            </h1>
-            <nav class="navbar col">
-                <ul class="d-flex list-unstyled" >
-                    <li class="m-2">Home</li>
-                    <li class="m-2">Site</li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="container-fluid">
-            <!-- hero: image + texte -->
-            <section class="">
-                <img src="profil.jpg" alt="" class="w-100">
-                <h2 class="h2 text-center">Section Hero</h2>
-                <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat natus mollitia inventore necessitatibus libero eos, quibusdam earum temporibus quisquam dignissimos accusamus delectus at ipsam, vel sed. Reiciendis numquam nobis sed!</p>
-            </section>
-
-            <section class="row">
-                <div class="col">col1</div>
-                <div class="col">col2</div>
-                <div class="col">col3</div>
-            </section>
-        </main>
-
-
-
-    </div>
+    <!-- Section Hero - container-fluid pour pleine largeur -->
+    <section class="hero-section">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 text-center">
+                    <h1 class="display-4">Bienvenue sur notre site</h1>
+                    <p class="lead">Une solution innovante pour vos besoins</p>
+                    <button class="btn btn-primary btn-lg">Découvrir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Features avec 3 colonnes -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <!-- Colonne 1 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="feature-icon mx-auto">
+                        <span style="color: white; font-size: 24px;">①</span>
+                    </div>
+                    <h3>Fonctionnalité 1</h3>
+                    <p>Description de la première fonctionnalité avec des détails pertinents.</p>
+                </div>
+                
+                <!-- Colonne 2 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="feature-icon mx-auto">
+                        <span style="color: white; font-size: 24px;">②</span>
+                    </div>
+                    <h3>Fonctionnalité 2</h3>
+                    <p>Description de la deuxième fonctionnalité qui apporte de la valeur.</p>
+                </div>
+                
+                <!-- Colonne 3 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="feature-icon mx-auto">
+                        <span style="color: white; font-size: 24px;">③</span>
+                    </div>
+                    <h3>Fonctionnalité 3</h3>
+                    <p>Description de la troisième fonctionnalité innovante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
